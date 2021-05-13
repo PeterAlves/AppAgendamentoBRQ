@@ -6,52 +6,83 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	
-	private String id;
+	private Long id;
 	private String nome;
 	private String email;
-	
+	private Long telefone;
+	private String endereco;
+	private Long cep;
+	private String cidade;
 	
 	public User() {
 	}
 
-
-	public User(String id, String nome, String email) {
+	public User(Long id, String nome, String email, Long telefone, String endereco, Long cep, String cidade) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
+		this.telefone = telefone;
+		this.endereco = endereco;
+		this.cep = cep;
+		this.cidade = cidade;
 	}
 
-
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getNome() {
 		return nome;
 	}
 
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 
 	public String getEmail() {
 		return email;
 	}
 
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+	public Long getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(Long telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public Long getCep() {
+		return cep;
+	}
+
+	public void setCep(Long cep) {
+		this.cep = cep;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
 
 	@Override
 	public int hashCode() {
@@ -60,7 +91,6 @@ public class User implements Serializable {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -78,6 +108,10 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
+
+	
+
+	
 	
 	
 }
